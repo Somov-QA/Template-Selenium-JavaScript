@@ -1,13 +1,11 @@
 # Проект автоматизированного тестирования Selenium (JavaScript & NodeJS)
 <p>
     <h3>Структура проекта:</h3>
-    <br>[node_modules]      - папка с установленными модулями selenium-webdriver
-    <br>chromedriver.exe    - webrdiver для браузера Chrome
-    <br>geckodriver.exe     - webrdiver для браузера FireFox
+    <br>[node_modules]      - <i>папка с установленными модулями selenium-webdriver</i>
+    <br>chromedriver.exe    - <i>webrdiver для браузера Chrome</i>
+    <br>geckodriver.exe     - <i>webrdiver для браузера FireFox</i>
     <br>package-lock
-    <br>test.js             - автоматизированный тест
-    <br>run-test.bat        - файл для запуска автотеста
-    <br>install-selenium-webdriver.bat  - файл для запуска установки
+    <br>test.js             - <i>автоматизированный тест</i>
 </p>
 <h3>Инструкция:</h3>
 <br>Скачать и установить NodeJS https://nodejs.org
