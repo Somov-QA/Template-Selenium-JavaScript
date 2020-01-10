@@ -8,8 +8,10 @@ var Events = (function() {
             console.log("Проверка авторизации: ", username.value, password.value);
             if(username.value == "admin" && password.value == "123"){
                 result.innerHTML = "Correct";
+                document.title = "Authorization: Correct";
             }else{
                 result.innerHTML = "Incorrect";
+                document.title = "Authorization: Incorrect";
             }
         }
     }

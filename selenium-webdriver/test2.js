@@ -1,26 +1,21 @@
 const webdriver = require('selenium-webdriver');
+const {Builder, By, Key, until} = require('selenium-webdriver');
 
 const USERNAME = 'admin';
 const PASSWORD = "123";
 
-function testAuthorization()
-{
-    const driver = new webdriver.Builder().forBrowser('chrome').build();
-    driver.get('http://localhost:8888/');
-}
-
-/*
-var webdriver = require('selenium-webdriver');
-
-function test2()
-{
-    var driver = new webdriver.Builder().forBrowser('chrome').build();
-    driver.manage().window().maximize();
-    driver.get('https://www.google.com/').then(function()
-    {
+(async function testAuthorization(){
+    let driver = await new Builder().forBrowser('chrome').build();
+    try{
+        await driver.get('http://localhost:8888/');
+        await driver.findElement(By.name('username')).sendKeys(USERNAME);
+        await driver.findElement(By.name('password')).sendKeys(PASSWORD);
+        await driver.findElement(By.name('button')).click();
         
-    });
-}
-
-test2();
-*/
+        let result = await driver.findElement(By.id('result')).getText();
+        console.log("RESULT", result);
+        await driver.wait(until.titleIs('Authorization: Correct'), 5000);
+    }finally{
+        await driver.quit();
+    }
+})();
