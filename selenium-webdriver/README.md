@@ -15,3 +15,5 @@
 <br>Webdriver для FireFox https://github.com/mozilla/geckodriver/releases/
 <br>Установка Selenium-Webdriver командой: <b>npm install selenium-webdriver</b>
 <br>Чтобы запустить автотест нужно выполнить команду: <b>node test.js</b>
+<br>
+<br>Описание методов Selenium: https://selenium.dev/selenium/docs/api/java/org/openqa/selenium/package-summary.html
